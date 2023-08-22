@@ -149,6 +149,15 @@
 	<head>
 </head>
     <script>
+	    // Função para alternar a visibilidade do menu hamburguer
+       function toggleMenu() {
+          var hamburgerMenu = document.getElementById("hamburgerMenu");
+          if (hamburgerMenu.style.right === "-250px") {
+            hamburgerMenu.style.right = "0";
+          } else {
+            hamburgerMenu.style.right = "-250px";
+          }
+    }
         function generateReportPreview() {
             // Get the selected value from the "Nome - Código" input field 
             var selectedName = document.getElementById("query").value;
@@ -158,18 +167,18 @@
              "BILY DOUGLAS RIBEIRO": "https://drive.google.com/file/d/1IbCXHu1lt2Z6Xpd7meRJk8Ig45I3G16Y/view?usp=drive_link", 
              "CLAUDINEI JOSÉ SIQUEIRA": "https://drive.google.com/file/d/19Yh-RkUOl1VYe2TkTyinRX7BUjq-OqsY/view?usp=drive_link",
              "DIEGO APARECIDO SOARES": "https://drive.google.com/file/d/1u7M0FHok2kjLMVA_jLvwD8Z4jgNhfdcx/view?usp=drive_link",
-	     "ELIESER GUEDES DOS PASSOS": "https://drive.google.com/file/d/1myYpE6Nw3zDcRCrW8lPMASOkaNk1O1jq/view?usp=drive_link",
-	     "ELTON CARLOS DOS SANTOS": "https://drive.google.com/file/d/1UYBpIYR6QEJgunbaxLrKu6hldeqFd4OR/view?usp=drive_link",
-	     "ERICK PEREIRA GALDO": "https://drive.google.com/file/d/1q4alQabkK6THQvnKtcs59Lj5ds6X9U6X/view?usp=drive_link",
-	     "EZEQUIAS ROSA DA SILVA": "https://drive.google.com/file/d/1gOYpYjqQMCsZiyMs3cgx2xquPnpJWJUA/view?usp=drive_link",
-	     "JEAN FELIPE MOREIRA": "https://drive.google.com/file/d/1zxaxzjaU2Ny8_S2jfRN40mz8IPoZ_Jiq/view?usp=drive_link",
-	     "JOSE PRUDENTE DA CRUZ": "https://drive.google.com/file/d/1VCQN7604hZD3iw9ZWnYAeYw0H1nidzfX/view?usp=drive_link",
-	     "LUAN JOSÉ DOS SANTOS": "https://drive.google.com/file/d/190Dw5x3lIqzqOtI3UssNlYSdB1tjRb2q/view?usp=drive_link",
-	     "LUIS SANTANA ALBERTO LIMA": "https://drive.google.com/file/d/11lPy5zxdM1WgsYh-Ve-TM0NHEuvGx8Y8/view?usp=drive_link",
-	     "LUIZ OLIVEIRA NETO": "https://drive.google.com/file/d/1Y63SzYNeg4nRHnkGiXlnA8suNWTslD9S/view?usp=drive_link",
-	     "OLIVIO FIGUEIRA DE CAMARGO NETO": "https://drive.google.com/file/d/1Sc8oZ7GZMbgPQhQnYNesHj9wWYajkio8/view?usp=drive_link",
-	     "RAFAEL SILVA BARBOSA": "https://drive.google.com/file/d/1wsLDb5ZDemQ-t012T3yrdv8r77bI_pFf/view?usp=drive_link",
-	     "WILIAN RICARDO SOARES": "https://drive.google.com/file/d/1T9Hiez3V0IJwg2pgA8PI-3apMSlwgiuS/view?usp=drive_link",
+	         "ELIESER GUEDES DOS PASSOS": "https://drive.google.com/file/d/1myYpE6Nw3zDcRCrW8lPMASOkaNk1O1jq/view?usp=drive_link",
+	         "ELTON CARLOS DOS SANTOS": "https://drive.google.com/file/d/1UYBpIYR6QEJgunbaxLrKu6hldeqFd4OR/view?usp=drive_link",
+	         "ERICK PEREIRA GALDO": "https://drive.google.com/file/d/1q4alQabkK6THQvnKtcs59Lj5ds6X9U6X/view?usp=drive_link",
+	         "EZEQUIAS ROSA DA SILVA": "https://drive.google.com/file/d/1gOYpYjqQMCsZiyMs3cgx2xquPnpJWJUA/view?usp=drive_link",
+	         "JEAN FELIPE MOREIRA": "https://drive.google.com/file/d/1zxaxzjaU2Ny8_S2jfRN40mz8IPoZ_Jiq/view?usp=drive_link",
+	         "JOSE PRUDENTE DA CRUZ": "https://drive.google.com/file/d/1VCQN7604hZD3iw9ZWnYAeYw0H1nidzfX/view?usp=drive_link",
+	         "LUAN JOSÉ DOS SANTOS": "https://drive.google.com/file/d/190Dw5x3lIqzqOtI3UssNlYSdB1tjRb2q/view?usp=drive_link",
+	         "LUIS SANTANA ALBERTO LIMA": "https://drive.google.com/file/d/11lPy5zxdM1WgsYh-Ve-TM0NHEuvGx8Y8/view?usp=drive_link",
+	         "LUIZ OLIVEIRA NETO": "https://drive.google.com/file/d/1Y63SzYNeg4nRHnkGiXlnA8suNWTslD9S/view?usp=drive_link",
+	         "OLIVIO FIGUEIRA DE CAMARGO NETO": "https://drive.google.com/file/d/1Sc8oZ7GZMbgPQhQnYNesHj9wWYajkio8/view?usp=drive_link",
+	         "RAFAEL SILVA BARBOSA": "https://drive.google.com/file/d/1wsLDb5ZDemQ-t012T3yrdv8r77bI_pFf/view?usp=drive_link",
+	         "WILIAN RICARDO SOARES": "https://drive.google.com/file/d/1T9Hiez3V0IJwg2pgA8PI-3apMSlwgiuS/view?usp=drive_link",
                 // Add more predefined PDFs for other names and codes as needed
              };
 
@@ -213,7 +222,7 @@
                         <option value="ERICK PEREIRA GALDO">
                         <option value="EZEQUIAS ROSA DA SILVA">
                         <option value="JEAN FELIPE MOREIRA">
-			<option value="JOSE PRUDENTE DA CRUZ">	
+		            	<option value="JOSE PRUDENTE DA CRUZ">	
                         <option value="LUAN JOSÉ DOS SANTOS">
                         <option value="LUIS SANTANA ALBERTO LIMA">
                         <option value="LUIZ OLIVEIRA NETO">
@@ -223,12 +232,12 @@
                     </datalist>
                 </div>
             </fieldset>
-                
-            <div class="input-group">
+             
+			 <div class="input-group">
                 <input type="button" value="Gerar Relatório" onclick="generateReportPreview()">
             </div>
-        </form>
-	    <!-- Botão de Menu Hamburguer -->
+
+		<!-- Botão de Menu Hamburguer -->
             <div class="menu-icon" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -240,19 +249,21 @@
                 <ul class="month-list">
                     <li><a href="pdf_preview.html?pdf=link_do_pdf_janeiro">Janeiro</a></li>
                     <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Fevereiro</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Março</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Abril</a></li>    
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Maio</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Junho</a></li>
-		    <li><a href="https://drive.google.com/drive/folders/12hPvaDfie6UQ_1XljBCmDA7b78aQioBF?usp=drive_link">Julho</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Agosto</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Setembro</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Outubro</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Novembro</a></li>
-		    <li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Dezembro</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Março</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Abril</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Maio</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Junho</a></li>
+					<li><a href="https://drive.google.com/drive/folders/12hPvaDfie6UQ_1XljBCmDA7b78aQioBF?usp=drive_link">Julho</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Agosto</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Setembro</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Outubro</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Novembro</a></li>
+					<li><a href="pdf_preview.html?pdf=link_do_pdf_fevereiro">Dezembro</a></li>
                     <!-- Adicione os meses restantes aqui -->
                 </ul>
                 
+            
+        </form>
      </div>
      
 </body>
