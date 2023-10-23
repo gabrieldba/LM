@@ -1182,20 +1182,4 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
             });
         });
     </script>
-
-   <script>
-  // Função para redirecionar o usuário para "index.html" após logout
-  function logoutAndRedirect() {
-    window.location.href = "index.html";
-  }
-
-  // Adicionar um ouvinte de evento ao botão "Logout"
-  document.querySelector(".wp-block-navigation-item__label").addEventListener("click", function (e) {
-    e.preventDefault(); // Impede o comportamento padrão do link
-    logoutAndRedirect(); // Chama a função de logout e redirecionamento
-  });
-
-  // Substitui a entrada do histórico para impedir o botão "Voltar" do navegador
-  history.replaceState(null, null, window.location.href);
-</script>
 ></body></html>
