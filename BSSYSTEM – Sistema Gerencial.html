@@ -1180,4 +1180,13 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
                 janela.focus();
             });
         });
+    </script>
+
+    </script>
+        window.addEventListener("beforeunload", function (e) {
+       // Cancela o evento de descarregamento da página
+         e.preventDefault();
+      // Redireciona o usuário para a página "index.html"
+         window.location.href = "index.html";
+      });
     </script></body></html>
