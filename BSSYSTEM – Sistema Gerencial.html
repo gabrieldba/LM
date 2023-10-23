@@ -1183,8 +1183,15 @@ if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
     </script>
 
     <script>
-  history.pushState(null, null, document.URL);
-window.addEventListener('popstate', function () {
-  history.pushState(null, null, document.URL);
-});
-</script>></body></html>
+  // Redireciona o usuário para "index.html" após logout
+  function logoutAndRedirect() {
+    window.location.href = "index.html";
+  }
+
+  // Substitui a entrada do histórico para impedir o botão "Voltar" do navegador
+  history.replaceState(null, null, window.location.href);
+
+  // Evento de clique no botão "Logout"
+  document.querySelector(".wp-block-navigation-item__label").addEventListener("click", logoutAndRedirect);
+</script>
+></body></html>
